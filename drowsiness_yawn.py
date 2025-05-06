@@ -92,8 +92,8 @@ time.sleep(1.0)
 
 while True:
 
-    frame = vs.read()
-    frame = imutils.resize(frame, width=450)
+    (frame, _) = vs.read()
+    + frame = imutils.resize(frame, width=450, inter=cv2.INTER_AREA)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     #rects = detector(gray, 0)
