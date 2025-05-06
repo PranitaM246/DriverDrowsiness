@@ -92,7 +92,7 @@ time.sleep(1.0)
 
 while True:
 
-    frame = vs.read()
+    (frame, _) = vs.read()
     frame = imutils.resize(frame, width=450)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
